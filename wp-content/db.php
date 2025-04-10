@@ -1,0 +1,1 @@
+/var/www/WordPress/wp-garden/wp-content/plugins/query-monitor/wp-content/db.php
