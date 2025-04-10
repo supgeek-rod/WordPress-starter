@@ -89,6 +89,17 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
+define( 'FS_METHOD', 'direct' );
+
+// Any domain
+if (isset($_SERVER['HTTP_HOST'])) {
+  define('WP_SITEURL', 'https://'. $_SERVER['HTTP_HOST']);
+  define('WP_HOME', 'https://'. $_SERVER['HTTP_HOST']);
+}
+
+// define( 'WP_HTTP_BLOCK_EXTERNAL', true );
+// define( 'WP_ACCESSIBLE_HOSTS', '*.wordpress.org,www.example.com' );
+
 
 
 /* That's all, stop editing! Happy publishing. */
