@@ -20,7 +20,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wp_dev' );
+define( 'DB_NAME', 'dev_wordpress_starter' );
 
 /** Database username */
 define( 'DB_USER', 'mysql' );
@@ -91,10 +91,10 @@ define( 'WP_DEBUG', false );
 
 define( 'FS_METHOD', 'direct' );
 
-// Any domain
+// Rewrite site domain
 if (isset($_SERVER['HTTP_HOST'])) {
-  define('WP_SITEURL', 'https://'. $_SERVER['HTTP_HOST']);
-  define('WP_HOME', 'https://'. $_SERVER['HTTP_HOST']);
+  define('WP_SITEURL', "{$_SERVER['REQUEST_SCHEME']}://{$_SERVER['HTTP_HOST']}");
+  define('WP_HOME', "{$_SERVER['REQUEST_SCHEME']}://{$_SERVER['HTTP_HOST']}");
 }
 
 // define( 'WP_HTTP_BLOCK_EXTERNAL', true );
